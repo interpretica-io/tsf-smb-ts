@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<package version="1.0">
+    <description>SMB/CIFS</description>
+    <author mailto="maxim.menshikov@interpretica.io" />
+    <session track_conf="silent">
+        <prologue><script name="prologue"><objective>Prepare the SMB group.</objective></script></prologue>
+        <epilogue><script name="epilogue"><objective>Finalize the SMB group.</objective></script></epilogue>
+        <run><script name="detect"><objective>Which SMB tooling the agent has.</objective></script></run>
+        <run><script name="serve_files"><objective>Serve a share and work on its files.</objective></script></run>
+        <run><script name="negotiate"><objective>What a connection negotiates.</objective></script></run>
+        <run><script name="audit"><objective>The posture of the SMB server.</objective></script></run>
+    </session>
+</package>
